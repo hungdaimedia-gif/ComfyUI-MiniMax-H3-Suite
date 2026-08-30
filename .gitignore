@@ -1,0 +1,40 @@
+# Virtual Environment
+venv/
+.venv/
+env/
+__pycache__/
+*.pyc
+
+# Models and Heavy Weights (DO NOT UPLOAD TO GITHUB)
+models/*
+!models/.gitkeep
+!models/*/.gitkeep
+!models/*/*/.gitkeep
+*.gguf
+*.safetensors
+*.ckpt
+*.pt
+*.bin
+*.pth
+*.download
+.cache/
+
+# Outputs and Temporary Files
+output/
+temp/
+input/*
+!input/.gitkeep
+*.mp4
+*.webm
+*.png
+*.jpg
+*.jpeg
+*.gif
+
+# Logs and User Data
+user/
+*.log
+
+# Git submodules or custom node repositories
+custom_nodes/*
+!custom_nodes/.gitkeep
