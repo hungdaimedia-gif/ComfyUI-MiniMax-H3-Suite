@@ -12,7 +12,31 @@ Specifically optimized to run smoothly on **8GB VRAM GPUs (e.g. RTX 3060 Ti / RT
 
 ---
 
-## 📥 1. Model Download Links & Storage Locations
+## 📂 1. Workflows Location & Detailed Feature Comparison
+
+All workflow files are stored in the **`workflows/`** folder (and mirrored in `user/default/workflows/`):
+
+### 1️⃣ `workflows/◉MMH3_Ref2v+MediaLoader_260827.json`
+* **Name**: MiniMax H3 Ref2VA + Media Loader Workflow
+* **Core Technology**: Uses **`Fantastic H3 Media Loader`** and **`Fantastic H3 Reference Splitter`** nodes.
+* **Key Features**:
+  * **Unified Media Dashboard**: Provides a clean all-in-one UI box to drop up to 9 reference pictures, 3 reference videos, and 3 audio files.
+  * **Zero Wire Clutter**: Automatically organizes, routes, and splits multi-modal reference tags `<Picture 1>`, `<Picture 2>`, `<Video 1>`, `<Audio 1>` behind the scenes.
+* **Best Use Case**: **(Recommended for most users)** Ideal for multi-modal blending projects where you combine a character from Image 1, environment from Image 2, motion from Video 1, and soundtrack from Audio 1 with a clean canvas.
+
+---
+
+### 2️⃣ `workflows/◉MMH3_Ref2V_Nomal-Input_260827.json`
+* **Name**: MiniMax H3 Ref2VA Normal-Input Workflow
+* **Core Technology**: Uses standalone standard ComfyUI input nodes (`LoadImage`, `VHS_LoadVideo`, `LoadAudio`).
+* **Key Features**:
+  * **Granular Input Control**: Every single input slot (`ref_image_0`, `ref_image_1`...) has its own dedicated node with visible wiring.
+  * **Extensibility**: Allows inserting custom pre-processing nodes (like image cropping, color grading, face detailing, or masking) directly before feeding into the H3 engine.
+* **Best Use Case**: Best for advanced creators who want full control over each reference file's individual pipeline and pre-processing steps.
+
+---
+
+## 📥 2. Model Download Links & Storage Locations
 
 Here are the direct download links from HuggingFace and their exact storage folders inside `ComfyUI/models/`:
 
@@ -32,7 +56,7 @@ Here are the direct download links from HuggingFace and their exact storage fold
 
 ---
 
-## ⚙️ 2. Golden Parameters & Tuning Guide (Recommended for 8GB VRAM)
+## ⚙️ 3. Golden Parameters & Tuning Guide (Recommended for 8GB VRAM)
 
 To achieve fast generation times (~1-2 minutes per video) without crashing your 8GB GPU:
 
@@ -52,7 +76,7 @@ To achieve fast generation times (~1-2 minutes per video) without crashing your 
 
 ---
 
-## 📝 3. Standard Prompt Structure for Ref2VA
+## 📝 4. Standard Prompt Structure for Ref2VA
 
 MiniMax H3 Ref2VA requires structured YAML prompts with `<Picture X>` reference tags:
 
@@ -81,7 +105,7 @@ Soft, soothing lofi acoustic piano melody, warm and relaxing mood.
 
 ---
 
-## 🚀 4. Step-by-Step Installation (English)
+## 🚀 5. Step-by-Step Installation (English)
 
 1. **Clone this repository**:
    ```bash
@@ -114,7 +138,31 @@ Bộ cấu hình, script tự động tải mô hình, công cụ khởi chạy 
 
 ---
 
-## 📥 1. Danh sách Link tải Models (.gguf, .safetensors)
+## 📂 1. Vị trí thư mục Workflow & Chi tiết công năng của 2 Workflow
+
+Toàn bộ các file Workflow JSON nằm tại thư mục: **`workflows/`** (đồng thời được sao lưu sẵn trong `user/default/workflows/`):
+
+### 1️⃣ Workflow 1: `workflows/◉MMH3_Ref2v+MediaLoader_260827.json`
+* **Tên gọi**: Workflow MiniMax H3 Ref2VA kết hợp Media Loader đa phương thức.
+* **Công nghệ cốt lõi**: Sử dụng node **`Fantastic H3 Media Loader`** và **`Fantastic H3 Reference Splitter`**.
+* **Công năng & Điểm nổi bật**:
+  * **Bảng điều khiển tập trung**: Cho phép bạn nạp cùng lúc tối đa 9 ảnh, 3 video, và 3 file âm thanh vào một khung duy nhất cực kỳ trực quan.
+  * **Giao diện cực gọn (Không rối dây)**: Tự động phân chia và định tuyến các thẻ `<Picture 1>`, `<Picture 2>`, `<Video 1>`, `<Audio 1>` ngầm bên dưới mà không làm rối màn hình canvas.
+* **Phù hợp cho**: **(Khuyên dùng cho người mới và nhu cầu thông thường)** Khi bạn muốn kết hợp nhân vật từ Ảnh 1, bối cảnh từ Ảnh 2, chuyển động từ Video 1 và giọng nói từ Audio 1 trên một giao diện gọn gàng, dễ dùng.
+
+---
+
+### 2️⃣ Workflow 2: `workflows/◉MMH3_Ref2V_Nomal-Input_260827.json`
+* **Tên gọi**: Workflow MiniMax H3 Ref2VA đầu vào tiêu chuẩn (Normal Input).
+* **Công nghệ cốt lõi**: Sử dụng các node đầu vào độc lập của ComfyUI (`LoadImage`, `VHS_LoadVideo`, `LoadAudio`).
+* **Công năng & Điểm nổi bật**:
+  * **Kiểm soát chi tiết từng cổng**: Mỗi ảnh và video tham chiếu đều có node riêng hiển thị đầy đủ dây nối (`ref_image_0`, `ref_image_1`...).
+  * **Dễ dàng mở rộng**: Bạn có thể chèn thêm các node xử lý ảnh trước khi nạp vào AI (như cắt cúp ảnh, tăng sáng, tách nền, vẽ mặt nạ mask, v.v.).
+* **Phù hợp cho**: Những người dùng nâng cao muốn can thiệp tiền xử lý kỹ lưỡng cho từng file ảnh/video trước khi đưa vào mô hình sinh video.
+
+---
+
+## 📥 2. Danh sách Link tải Models (.gguf, .safetensors)
 
 Dưới đây là chi tiết nguồn tải chính thức từ HuggingFace và vị trí đặt file trong thư mục `ComfyUI/models/`:
 
@@ -134,7 +182,7 @@ Dưới đây là chi tiết nguồn tải chính thức từ HuggingFace và v�
 
 ---
 
-## ⚙️ 2. Các thông số CẤU HÌNH VÀNG (Khuyên dùng cho GPU 8GB VRAM)
+## ⚙️ 3. Các thông số CẤU HÌNH VÀNG (Khuyên dùng cho GPU 8GB VRAM)
 
 Để mô hình render video mượt mà, chất lượng cao và chỉ mất **1 - 2 phút/video** trên card 8GB VRAM (RTX 3060 Ti):
 
@@ -158,7 +206,7 @@ Dưới đây là chi tiết nguồn tải chính thức từ HuggingFace và v�
 
 ---
 
-## 🚀 3. Hướng dẫn cài đặt chi tiết (Tiếng Việt)
+## 🚀 4. Hướng dẫn cài đặt chi tiết (Tiếng Việt)
 
 1. **Clone repository này về máy**:
    ```bash
