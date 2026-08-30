@@ -12,6 +12,15 @@ Specifically optimized to run smoothly on **8GB VRAM GPUs (e.g. RTX 3060 Ti / RT
 
 ---
 
+## 📺 Credits & Original Tutorial Video
+
+* **Original Video Tutorial**: [【徹底解説】もう１つのMiniMax H3 Ref2VAモデルの使い方 - YouTube (Timestamp 8:18)](https://youtu.be/e3fHQwTY8VM?t=498)
+* **Author / Channel**: **AI映像研究会 (cue)**
+* **Note Article**: [【簡単❗️楽しい❗️】もう１つのMiniMax H3 「Ref2VA」の使い方❗️ - note.com](https://note.com/synth_brain/n/nbd4c5297e6f4)
+* **Online Prompt Generator**: [Streamlit MiniMax H3 Prompt Maker](https://minimaxh3-ref2va-prompt-generator-6t7yctrtghveq2xr6xqrtn.streamlit.app/)
+
+---
+
 ## 📂 1. Workflows Location & Detailed Feature Comparison
 
 All workflow files are stored in the **`workflows/`** folder (and mirrored in `user/default/workflows/`):
@@ -138,6 +147,15 @@ Bộ cấu hình, script tự động tải mô hình, công cụ khởi chạy 
 
 ---
 
+## 📺 Nguồn & Video Tutorial Gốc
+
+* **Video Tutorial YouTube Gốc**: [【徹底解説】もう１つのMiniMax H3 Ref2VAモデルの使い方 - YouTube (Phút 8:18)](https://youtu.be/e3fHQwTY8VM?t=498)
+* **Tác giả / Kênh YouTube**: **AI映像研究会 (cue)**
+* **Bài viết hướng dẫn**: [【簡単❗️楽しい❗️】もう１つのMiniMax H3 「Ref2VA」の使い方❗️ - note.com](https://note.com/synth_brain/n/nbd4c5297e6f4)
+* **Công cụ tạo Prompt Online**: [Streamlit MiniMax H3 Prompt Maker](https://minimaxh3-ref2va-prompt-generator-6t7yctrtghveq2xr6xqrtn.streamlit.app/)
+
+---
+
 ## 📂 1. Vị trí thư mục Workflow & Chi tiết công năng của 2 Workflow
 
 Toàn bộ các file Workflow JSON nằm tại thư mục: **`workflows/`** (đồng thời được sao lưu sẵn trong `user/default/workflows/`):
@@ -156,7 +174,7 @@ Toàn bộ các file Workflow JSON nằm tại thư mục: **`workflows/`** (đ�
 * **Tên gọi**: Workflow MiniMax H3 Ref2VA đầu vào tiêu chuẩn (Normal Input).
 * **Công nghệ cốt lõi**: Sử dụng các node đầu vào độc lập của ComfyUI (`LoadImage`, `VHS_LoadVideo`, `LoadAudio`).
 * **Công năng & Điểm nổi bật**:
-  * **Kiểm soát chi tiết từng cổng**: Mỗi ảnh và video tham chiếu đều có node riêng hiển thị đầy đủ dây nối (`ref_image_0`, `ref_image_1`...).
+  * **Kiểm soát từng cổng chi tiết**: Mỗi ảnh và video tham chiếu đều có node riêng hiển thị đầy đủ dây nối (`ref_image_0`, `ref_image_1`...).
   * **Dễ dàng mở rộng**: Bạn có thể chèn thêm các node xử lý ảnh trước khi nạp vào AI (như cắt cúp ảnh, tăng sáng, tách nền, vẽ mặt nạ mask, v.v.).
 * **Phù hợp cho**: Những người dùng nâng cao muốn can thiệp tiền xử lý kỹ lưỡng cho từng file ảnh/video trước khi đưa vào mô hình sinh video.
 
